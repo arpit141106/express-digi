@@ -40,7 +40,7 @@ app.get("/teas", (req, res) => {
   res.status(200).send(teaData);
 });
 
-// get a tea with id
+// get a tea with id using given array of "teaData"
 app.get("/teas/:id", (req, res) => {
   const tea = teaData.find((tea) => tea.id === parseInt(req.params.id));
   if (!tea) {
